@@ -1,0 +1,138 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #c8cdd4, #d9d7e4);
+}
+
+.todo-container {
+    width: 100%;
+    max-width: 520px;
+    padding: 30px;
+    background: rgb(223, 216, 216);
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(30, 41, 59, 0.12);
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    color: #172554;
+    font-size: 30px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+}
+
+.task-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 14px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#addBtn {
+    background: #050d1f;
+}
+
+#addBtn:hover {
+    background: #1d4ed8;
+}
+
+.task-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 22px 0 12px;
+    color: #475569;
+    font-size: 14px;
+}
+
+#completedCount {
+    color: #16a34a;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+    color: #1e293b;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.complete-btn {
+    background: #12d359;
+}
+
+.delete-btn {
+    background: #be0808;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    padding: 12px 0;
+}
+
+@media (max-width: 480px) {
+    .todo-container {
+        padding: 20px;
+    }
+
+    .task-input {
+        flex-wrap: wrap;
+    }
+
+    .task-input input {
+        width: 100%;
+    }
+
+    .task-item {
+        flex-wrap: wrap;
+    }
+}
